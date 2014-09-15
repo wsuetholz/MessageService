@@ -14,8 +14,8 @@ import net.suetholz.messageing.api.MessageProducer;
  * @author wsuetholz
  */
 public class MessageHandler implements Message {
-    MessageProducer producer;
-    MessageConsumer consumer;
+    private MessageProducer producer;
+    private MessageConsumer consumer;
     
     public MessageHandler ( MessageProducer producer, MessageConsumer consumer ) {
 	if (producer == null) {
