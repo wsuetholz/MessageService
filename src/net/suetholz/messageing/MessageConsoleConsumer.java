@@ -12,7 +12,7 @@ import net.suetholz.messageing.api.MessageProducer;
  *
  * @author wsuetholz
  */
-public class Message2ConsoleConsumer implements MessageConsumer {
+public class MessageConsoleConsumer implements MessageConsumer {
 
     @Override
     public void consumeMessage(MessageProducer message) {
