@@ -28,6 +28,7 @@ public class MessageHandler implements Message {
 	this.consumer = consumer;
     }
     
+    @Override
     public void processMessage () {
 	this.consumer.consumeMessage ( this.producer.produceMessage() ) ;
     }
