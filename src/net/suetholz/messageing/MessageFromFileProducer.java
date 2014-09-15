@@ -14,11 +14,11 @@ import net.suetholz.messageing.api.MessageProducer;
  *
  * @author wsuetholz
  */
-public class ProduceMessageFromFile implements MessageProducer {
+public class MessageFromFileProducer implements MessageProducer {
 
     private String filePath;
 
-    public ProduceMessageFromFile(String filePath) {
+    public MessageFromFileProducer(String filePath) {
 	if (filePath == null || filePath.length() <= 0) {
 	    throw new IllegalArgumentException("File path needs to be supplied");
 	}

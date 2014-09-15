@@ -13,14 +13,14 @@ import net.suetholz.messageing.api.MessageConsumer;
  *
  * @author wsuetholz
  */
-public class ConsumeString2JOption implements MessageConsumer {
+public class Message2JOptionConsumer implements MessageConsumer {
 
     Component parentComponent;
     
      /** 
      * @param parentComponent
      */
-    public ConsumeString2JOption ( Component parentComponent ) {
+    public Message2JOptionConsumer ( Component parentComponent ) {
 	this.parentComponent = parentComponent;	    // Yes this CAN be null.
     }
     

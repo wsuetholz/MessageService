@@ -11,7 +11,7 @@ import net.suetholz.messageing.api.MessageProducer;
  *
  * @author wsuetholz
  */
-public final class ProduceStringMessage implements MessageProducer {
+public final class StringMessageProducer implements MessageProducer {
 
     private String message;
     
@@ -29,7 +29,7 @@ public final class ProduceStringMessage implements MessageProducer {
      * 
      * @param message 
      */
-    public ProduceStringMessage ( String message ) {
+    public StringMessageProducer ( String message ) {
 	if (message == null) {
 	    throw new IllegalArgumentException ("Message cannot be null!");
 	}

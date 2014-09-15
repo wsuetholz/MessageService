@@ -11,7 +11,7 @@ import net.suetholz.messageing.api.MessageConsumer;
  *
  * @author wsuetholz
  */
-public class ConsumeString2Console implements MessageConsumer {
+public class Message2ConsoleConsumer implements MessageConsumer {
 
     @Override
     public void consumeMessage(String message) {

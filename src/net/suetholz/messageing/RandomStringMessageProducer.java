@@ -22,12 +22,12 @@ import net.suetholz.messageing.api.MessageProducer;
  *
  * @author wsuetholz
  */
-public final class ProduceRandomStringMessage implements MessageProducer {
+public final class RandomStringMessageProducer implements MessageProducer {
 
     private String[] messageChoices;
     long numDigits;
     
-    public ProduceRandomStringMessage ( String[] messageChoices ) {
+    public RandomStringMessageProducer ( String[] messageChoices ) {
 	if (messageChoices == null || messageChoices.length == 0) {
 	    throw new IllegalArgumentException ( "Array of message choices needs to be filled in");
 	}

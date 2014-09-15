@@ -27,12 +27,12 @@ public class Main {
 	consumer = new MessageConsumer[2];
 	producer = new MessageProducer[3];
 
-	consumer[0] = new ConsumeString2Console();
-	consumer[1] = new ConsumeString2JOption(null);
+	consumer[0] = new Message2ConsoleConsumer();
+	consumer[1] = new Message2JOptionConsumer(null);
 
-	producer[0] = new ProduceMessageFromFile("testFile.txt");
-	producer[1] = new ProduceStringMessage("This is a String Message.  Hello There World?");
-	producer[2] = new ProduceRandomStringMessage(randomChoices);
+	producer[0] = new MessageFromFileProducer("testFile.txt");
+	producer[1] = new StringMessageProducer("This is a String Message.  Hello There World?");
+	producer[2] = new RandomStringMessageProducer(randomChoices);
 
 	int msgidx = 0;
 	for (int i = 0; i < consumer.length; i++) {
