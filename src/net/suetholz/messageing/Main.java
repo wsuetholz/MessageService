@@ -25,7 +25,7 @@ public class Main {
 
 	message = new MessageHandler[10];
 	consumer = new MessageConsumer[2];
-	producer = new MessageProducer[3];
+	producer = new MessageProducer[4];
 
 	consumer[0] = new Message2ConsoleConsumer();
 	consumer[1] = new Message2JOptionConsumer(null);
@@ -33,6 +33,7 @@ public class Main {
 	producer[0] = new MessageFromFileProducer("testFile.txt");
 	producer[1] = new StringMessageProducer("This is a String Message.  Hello There World?");
 	producer[2] = new RandomStringMessageProducer(randomChoices);
+	producer[3] = new MessageFromKeyboardProducer();
 
 	int msgidx = 0;
 	for (int i = 0; i < consumer.length; i++) {

@@ -30,6 +30,6 @@ public class MessageHandler implements Message {
     
     @Override
     public void processMessage () {
-	this.consumer.consumeMessage ( this.producer.produceMessage() ) ;
+	this.consumer.consumeMessage ( this.producer ) ;
     }
 }

@@ -11,5 +11,5 @@ package net.suetholz.messageing.api;
  */
 public interface MessageConsumer {
 
-    public abstract void consumeMessage(String message);
+    public abstract void consumeMessage(MessageProducer message);
 }

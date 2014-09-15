@@ -5,18 +5,21 @@
  */
 package net.suetholz.messageing;
 
-import net.suetholz.messageing.api.MessageConsumer;
+import java.util.Scanner;
 import net.suetholz.messageing.api.MessageProducer;
 
 /**
  *
  * @author wsuetholz
  */
-public class Message2ConsoleConsumer implements MessageConsumer {
+public class MessageFromKeyboardProducer implements MessageProducer {
 
     @Override
-    public void consumeMessage(MessageProducer message) {
-	System.out.println(message.produceMessage());
+    public String produceMessage() {
+	Scanner sc = new Scanner(System.in);
+	String line = sc.nextLine();
+
+	return line;
     }
-    
+
 }

@@ -8,6 +8,7 @@ package net.suetholz.messageing;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 import net.suetholz.messageing.api.MessageConsumer;
+import net.suetholz.messageing.api.MessageProducer;
 
 /**
  *
@@ -25,9 +26,9 @@ public class Message2JOptionConsumer implements MessageConsumer {
     }
     
     @Override
-    public void consumeMessage(String message) {
+    public void consumeMessage(MessageProducer message) {
 	JOptionPane.showMessageDialog(this.parentComponent,
-				      message);
+				      message.produceMessage());
     }
 
 }
