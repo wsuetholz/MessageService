@@ -9,7 +9,7 @@ package net.suetholz.messageing.api;
  *
  * @author wsuetholz
  */
-public interface Message {
+public interface MessageService {
 
     public abstract void processMessage();
 }

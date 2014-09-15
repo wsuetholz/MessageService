@@ -5,7 +5,7 @@
  */
 package net.suetholz.messageing;
 
-import net.suetholz.messageing.api.Message;
+import net.suetholz.messageing.api.MessageService;
 import net.suetholz.messageing.api.MessageConsumer;
 import net.suetholz.messageing.api.MessageProducer;
 
@@ -13,7 +13,7 @@ import net.suetholz.messageing.api.MessageProducer;
  *
  * @author wsuetholz
  */
-public class MessageHandler implements Message {
+public class MessageHandler implements MessageService {
 
     private MessageProducer producer;
     private MessageConsumer consumer;

@@ -5,7 +5,7 @@
  */
 package net.suetholz.messageing;
 
-import net.suetholz.messageing.api.Message;
+import net.suetholz.messageing.api.MessageService;
 import net.suetholz.messageing.api.MessageConsumer;
 import net.suetholz.messageing.api.MessageProducer;
 
@@ -16,7 +16,7 @@ import net.suetholz.messageing.api.MessageProducer;
 public class Main {
 
     public static void main(String[] args) {
-	Message[] message;
+	MessageService[] message;
 	MessageConsumer[] consumer;
 	MessageProducer[] producer;
 	String[] randomChoices = {
