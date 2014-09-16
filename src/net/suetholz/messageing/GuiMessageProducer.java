@@ -15,10 +15,10 @@ import net.suetholz.messageing.api.MessageProducer;
 public class GuiMessageProducer implements MessageProducer {
 
     @Override
-    public String produceMessage() {
+    public StringMessage produceMessage() {
 	String line = JOptionPane.showInputDialog("Please enter message");
 
-	return line;
+	return new StringMessage(line);
     }
     
 }

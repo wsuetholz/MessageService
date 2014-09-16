@@ -6,6 +6,7 @@
 package net.suetholz.messageing;
 
 import java.util.Scanner;
+import net.suetholz.messageing.api.MessageContainer;
 import net.suetholz.messageing.api.MessageProducer;
 
 /**
@@ -15,11 +16,11 @@ import net.suetholz.messageing.api.MessageProducer;
 public class MessageFromKeyboardProducer implements MessageProducer {
 
     @Override
-    public String produceMessage() {
+    public MessageContainer produceMessage() {
 	Scanner sc = new Scanner(System.in);
 	String line = sc.nextLine();
 
-	return line;
+	return new StringMessage(line);
     }
 
 }

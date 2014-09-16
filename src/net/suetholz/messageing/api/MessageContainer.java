@@ -9,7 +9,6 @@ package net.suetholz.messageing.api;
  *
  * @author wsuetholz
  */
-public interface MessageProducer {
-
-    public abstract MessageContainer produceMessage();
+public interface MessageContainer {
+    public abstract String getString () ;
 }

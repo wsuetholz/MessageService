@@ -8,6 +8,7 @@ package net.suetholz.messageing;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import net.suetholz.messageing.api.MessageContainer;
 import net.suetholz.messageing.api.MessageProducer;
 
 /**
@@ -26,7 +27,7 @@ public class MessageFromFileProducer implements MessageProducer {
     }
 
     @Override
-    public String produceMessage() {
+    public MessageContainer produceMessage() {
 	StringBuffer sb = new StringBuffer();
 	char[] chars = new char[4 * 1024];
 	int len;
@@ -47,7 +48,7 @@ public class MessageFromFileProducer implements MessageProducer {
 	    sb.append("\" NOT FOUND");
 	}
 	
-	return sb.toString();
+	return new StringMessage (sb.toString());
     }
 
 }

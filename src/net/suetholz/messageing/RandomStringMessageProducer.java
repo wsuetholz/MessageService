@@ -5,6 +5,7 @@
  */
 package net.suetholz.messageing;
 
+import net.suetholz.messageing.api.MessageContainer;
 import net.suetholz.messageing.api.MessageProducer;
 
 /**
@@ -37,14 +38,14 @@ public final class RandomStringMessageProducer implements MessageProducer {
     }
 
     @Override
-    public String produceMessage() {
+    public MessageContainer produceMessage() {
 	long index = Math.round ( Math.random() * Math.pow(10, numDigits) ) % messageChoices.length ;
 	
 	if (index < 0 || index > messageChoices.length) {   // Trust is a wonderful thing..  Oh well.. Should NEVER Happen!!
 	    throw new IndexOutOfBoundsException ( "Calculation of Random Index Error!" );
 	}
 	
-	return this.messageChoices[(int)index] ;
+	return new StringMessage(this.messageChoices[(int)index]) ;
     }
 
 }

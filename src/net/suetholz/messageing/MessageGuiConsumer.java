@@ -28,7 +28,7 @@ public class MessageGuiConsumer implements MessageConsumer {
     @Override
     public void consumeMessage(MessageProducer message) {
 	JOptionPane.showMessageDialog(this.parentComponent,
-				      message.produceMessage());
+				      message.produceMessage().getString());
     }
 
 }

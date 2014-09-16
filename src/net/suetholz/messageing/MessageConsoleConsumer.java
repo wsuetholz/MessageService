@@ -16,7 +16,7 @@ public class MessageConsoleConsumer implements MessageConsumer {
 
     @Override
     public void consumeMessage(MessageProducer message) {
-	System.out.println(message.produceMessage());
+	System.out.println(message.produceMessage().getString());
     }
     
 }

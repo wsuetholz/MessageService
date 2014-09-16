@@ -5,6 +5,7 @@
  */
 package net.suetholz.messageing;
 
+import net.suetholz.messageing.api.MessageContainer;
 import net.suetholz.messageing.api.MessageProducer;
 
 /**
@@ -38,8 +39,8 @@ public final class StringMessageProducer implements MessageProducer {
     }
     
     @Override
-    public String produceMessage() {
-	return this.message;
+    public MessageContainer produceMessage() {
+	return new StringMessage (this.message);
     }
         
 }
