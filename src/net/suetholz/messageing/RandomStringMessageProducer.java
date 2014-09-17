@@ -5,6 +5,7 @@
  */
 package net.suetholz.messageing;
 
+import java.util.Random;
 import net.suetholz.messageing.api.MessageContainer;
 import net.suetholz.messageing.api.MessageProducer;
 
@@ -36,16 +37,21 @@ public final class RandomStringMessageProducer implements MessageProducer {
 	this.messageChoices = messageChoices;
 	this.numDigits = String.valueOf(messageChoices.length).length();
     }
+    
+    
 
     @Override
     public MessageContainer produceMessage() {
-	long index = Math.round ( Math.random() * Math.pow(10, numDigits) ) % messageChoices.length ;
+//	long index = Math.round ( Math.random() * Math.pow(10, numDigits) ) % messageChoices.length ;
+//	
+//	if (index < 0 || index > messageChoices.length) {   // Trust is a wonderful thing..  Oh well.. Should NEVER Happen!!
+//	    throw new IndexOutOfBoundsException ( "Calculation of Random Index Error!" );
+//	}
 	
-	if (index < 0 || index > messageChoices.length) {   // Trust is a wonderful thing..  Oh well.. Should NEVER Happen!!
-	    throw new IndexOutOfBoundsException ( "Calculation of Random Index Error!" );
-	}
+	Random r = new Random(System.nanoTime());
+	int index = r.nextInt(messageChoices.length);
 	
-	return new StringMessage(this.messageChoices[(int)index]) ;
+	return new StringMessage(this.messageChoices[index]) ;
     }
 
 }
